@@ -14,15 +14,17 @@ jobs:
         - name: Setup JDK
           uses: actions/setup-java@v3.12.0
           with:
-            distribution: microsoft
+            distribution: adopt
             java-version: 17.0.7
-        - name: Build with Gradle
+        - name: Executar permissão ao Gradle
           run: chmod +x ./gradlew
+        - name: Build with Gradle
+          run: ./gradlew build
         - name: Upload APK
           uses: actions/upload-artifact@v3.1.2
           with:
               name: app
-              path: /AppJavaDay/app/build/outputs/apk/debug/app-debug.apk
+              path: app/build/outputs/apk/debug/app-debug.apk
 
           
           
