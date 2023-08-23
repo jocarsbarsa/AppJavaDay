@@ -6,11 +6,11 @@ plugins {
 android {
     namespace 'com.example.javaday'
     compileSdk 33
-    targetSdk 33
 
     defaultConfig {
         applicationId "com.example.javaday"
         minSdk 24
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
